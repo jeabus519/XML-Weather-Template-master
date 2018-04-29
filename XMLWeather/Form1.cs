@@ -21,13 +21,13 @@ namespace XMLWeather
         {
             InitializeComponent();
             GetData();
-            ExtractCurrent();
-            ExtractForecast();
+            //ExtractCurrent();
+            //ExtractForecast();
             Extract3Hour();
 
             // open weather screen for todays weather
-            CurrentScreen cs = new CurrentScreen();
-            this.Controls.Add(cs);
+            TodayScreen ts = new TodayScreen();
+            this.Controls.Add(ts);
         }
 
         private static void GetData()
@@ -90,9 +90,19 @@ namespace XMLWeather
                 Day d = new Day();
 
                 string s = n.Attributes["from"].Value;
-                d.currentTime = s.Substring(s.IndexOf("T")+1);
-                d.currentTemp = temp.Attributes["value"].Value;
+                d.currentTime = s.Substring(s.IndexOf("T")+1, 5);
+
+                double j = Convert.ToDouble(temp.Attributes["value"].Value);
+                j = Math.Round(j);
+                d.currentTemp = Convert.ToString(j);
+
                 d.condition = conditions.Attributes["var"].Value;
+                if (conditions.Attributes["number"].Value == "802"||
+                    conditions.Attributes["number"].Value == "803"||
+                    conditions.Attributes["number"].Value == "804")
+                {
+                    d.condition = conditions.Attributes["number"].Value;
+                }
 
                 days.Add(d);
 
