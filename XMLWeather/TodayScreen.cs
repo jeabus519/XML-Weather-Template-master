@@ -24,16 +24,21 @@ namespace XMLWeather
             int n = 3;
             foreach(Day d in Form1.days)
             {
-                Control icon = this.Controls["icon" + n];
-                Control time = this.Controls["timeLabel" + n];
-                Control temp = this.Controls["tempLabel" + n];
+                if (n < 18)
+                {
+                    Control time = this.Controls["timeLabel" + n];
+                    Control temp = this.Controls["tempLabel" + n];
 
-                temp.Text = d.currentTemp + "°C";
-                time.Text = d.currentTime;
+                    temp.Text = d.currentTemp + "°C";
+                    time.Text = d.currentTime;
 
-                //Image p = ResourceManager.f;
+                    var icon = (PictureBox)this.Controls.Find("icon" + n, false)[0];
+                    var img = (Image)Properties.Resources.ResourceManager.GetObject("_" + d.condition);
+                    icon.Image = img;
 
-                n = n + 3;
+                    n = n + 3;
+                }
+
             }
         }
     }

@@ -15,15 +15,14 @@ namespace XMLWeather
     {
         // TODO: create list to hold day objects
         public static List<Day> days = new List<Day>();
-        Day d = new Day();
 
         public Form1()
         {
             InitializeComponent();
             GetData();
-            //ExtractCurrent();
             //ExtractForecast();
             Extract3Hour();
+            ExtractCurrent();
 
             // open weather screen for todays weather
             TodayScreen ts = new TodayScreen();
@@ -59,20 +58,38 @@ namespace XMLWeather
             d.currentTemp = temp.Attributes["value"].Value;
             d.tempHigh = temp.Attributes["max"].Value;
             d.tempLow = temp.Attributes["min"].Value;
+
             d.condition = conditions.Attributes["icon"].Value;
+            string st = d.condition.Substring(0, 2);
+            if (conditions.Attributes["number"].Value == "802" ||
+                conditions.Attributes["number"].Value == "803" ||
+                conditions.Attributes["number"].Value == "804") //weather codes with icons other than what openweathermap returns
+            {
+                d.condition = conditions.Attributes["number"].Value;
+            }
+            else if //icons that don't have day/night versions
+                (st == "03" ||
+                st == "09" ||
+                st == "11" ||
+                st == "13")
+            {
+                d.condition = st;
+            }
 
             days.Add(d);
         }
 
-        private void ExtractForecast()
-        {
-            XmlDocument doc = new XmlDocument();
-            doc.Load("WeatherData7Day.xml");
+                /*
+                private void ExtractForecast()
+                {
+                    XmlDocument doc = new XmlDocument();
+                    doc.Load("WeatherData7Day.xml");
 
-            XmlNodeList dateList = doc.GetElementsByTagName("time");
-            XmlNodeList tempList = doc.GetElementsByTagName("temperature");
-            XmlNodeList cloudsList = doc.GetElementsByTagName("clouds");
-        }
+                    XmlNodeList dateList = doc.GetElementsByTagName("time");
+                    XmlNodeList tempList = doc.GetElementsByTagName("temperature");
+                    XmlNodeList cloudsList = doc.GetElementsByTagName("clouds");
+                }
+        */
 
         private void Extract3Hour()
         {
@@ -92,17 +109,27 @@ namespace XMLWeather
                 string s = n.Attributes["from"].Value;
                 d.currentTime = s.Substring(s.IndexOf("T")+1, 5);
 
-                double j = Convert.ToDouble(temp.Attributes["value"].Value);
-                j = Math.Round(j);
-                d.currentTemp = Convert.ToString(j);
+                double tempVal = Convert.ToDouble(temp.Attributes["value"].Value);
+                tempVal = Math.Round(tempVal);
+                d.currentTemp = Convert.ToString(tempVal);
 
                 d.condition = conditions.Attributes["var"].Value;
-                if (conditions.Attributes["number"].Value == "802"||
-                    conditions.Attributes["number"].Value == "803"||
-                    conditions.Attributes["number"].Value == "804")
+                string st = d.condition.Substring(0, 2);
+                if (conditions.Attributes["number"].Value == "802" ||
+                    conditions.Attributes["number"].Value == "803" ||
+                    conditions.Attributes["number"].Value == "804") //weather codes with icons other than what openweathermap returns
                 {
                     d.condition = conditions.Attributes["number"].Value;
                 }
+                else if //icons that don't have day/night versions
+                    (st == "03"||
+                    st == "09"||
+                    st == "11"||
+                    st == "13")
+                {
+                    d.condition = st;
+                }
+
 
                 days.Add(d);
 

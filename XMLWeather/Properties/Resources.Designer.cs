@@ -63,9 +63,39 @@ namespace XMLWeather.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _03 {
+        internal static System.Drawing.Bitmap _01d {
             get {
-                object obj = ResourceManager.GetObject("_03", resourceCulture);
+                object obj = ResourceManager.GetObject("_01d", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _01n {
+            get {
+                object obj = ResourceManager.GetObject("_01n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _02d {
+            get {
+                object obj = ResourceManager.GetObject("_02d", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _02n {
+            get {
+                object obj = ResourceManager.GetObject("_02n", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,46 +173,6 @@ namespace XMLWeather.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _800d {
-            get {
-                object obj = ResourceManager.GetObject("_800d", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _800n {
-            get {
-                object obj = ResourceManager.GetObject("_800n", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _801d {
-            get {
-                object obj = ResourceManager.GetObject("_801d", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _801n {
-            get {
-                object obj = ResourceManager.GetObject("_801n", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap _802 {
             get {
                 object obj = ResourceManager.GetObject("_802", resourceCulture);
@@ -206,16 +196,6 @@ namespace XMLWeather.Properties {
         internal static System.Drawing.Bitmap _804 {
             get {
                 object obj = ResourceManager.GetObject("_804", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Rain3 {
-            get {
-                object obj = ResourceManager.GetObject("Rain3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

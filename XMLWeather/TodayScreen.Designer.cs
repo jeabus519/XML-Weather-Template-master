@@ -68,9 +68,14 @@
             // 
             // icon3
             // 
+            this.icon3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.icon3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.icon3.Image = global::XMLWeather.Properties.Resources._01d;
             this.icon3.Location = new System.Drawing.Point(50, 513);
+            this.icon3.Margin = new System.Windows.Forms.Padding(0);
             this.icon3.Name = "icon3";
             this.icon3.Size = new System.Drawing.Size(96, 96);
+            this.icon3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.icon3.TabIndex = 1;
             this.icon3.TabStop = false;
             // 
@@ -260,8 +265,7 @@
             // 
             // TodayScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.vertLabel2);
             this.Controls.Add(this.vertLabel1);
             this.Controls.Add(this.horLabel);
@@ -293,6 +297,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.icon15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icon18)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
