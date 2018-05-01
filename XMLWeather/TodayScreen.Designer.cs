@@ -50,18 +50,28 @@
             this.horLabel = new System.Windows.Forms.Label();
             this.vertLabel1 = new System.Windows.Forms.Label();
             this.vertLabel2 = new System.Windows.Forms.Label();
+            this.iconCurrent = new System.Windows.Forms.PictureBox();
+            this.locationLabel = new System.Windows.Forms.Label();
+            this.timeLabel = new System.Windows.Forms.Label();
+            this.dateLabel = new System.Windows.Forms.Label();
+            this.dateLine = new System.Windows.Forms.Label();
+            this.currentTempLabel = new System.Windows.Forms.Label();
+            this.highLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lowLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.icon3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icon6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icon9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icon12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icon15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icon18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconCurrent)).BeginInit();
             this.SuspendLayout();
             // 
             // divideLabel
             // 
             this.divideLabel.BackColor = System.Drawing.Color.Black;
-            this.divideLabel.Location = new System.Drawing.Point(25, 480);
+            this.divideLabel.Location = new System.Drawing.Point(25, 470);
             this.divideLabel.Name = "divideLabel";
             this.divideLabel.Size = new System.Drawing.Size(400, 8);
             this.divideLabel.TabIndex = 0;
@@ -263,9 +273,113 @@
             this.vertLabel2.Size = new System.Drawing.Size(3, 312);
             this.vertLabel2.TabIndex = 21;
             // 
+            // iconCurrent
+            // 
+            this.iconCurrent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconCurrent.BackgroundImage = global::XMLWeather.Properties.Resources._01d;
+            this.iconCurrent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.iconCurrent.Location = new System.Drawing.Point(129, 130);
+            this.iconCurrent.Margin = new System.Windows.Forms.Padding(0);
+            this.iconCurrent.Name = "iconCurrent";
+            this.iconCurrent.Size = new System.Drawing.Size(192, 192);
+            this.iconCurrent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.iconCurrent.TabIndex = 22;
+            this.iconCurrent.TabStop = false;
+            // 
+            // locationLabel
+            // 
+            this.locationLabel.BackColor = System.Drawing.Color.Black;
+            this.locationLabel.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.locationLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.locationLabel.Location = new System.Drawing.Point(0, 0);
+            this.locationLabel.Name = "locationLabel";
+            this.locationLabel.Size = new System.Drawing.Size(325, 60);
+            this.locationLabel.TabIndex = 23;
+            this.locationLabel.Text = "Stratford, CA";
+            this.locationLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // timeLabel
+            // 
+            this.timeLabel.BackColor = System.Drawing.Color.Black;
+            this.timeLabel.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.timeLabel.Location = new System.Drawing.Point(325, 0);
+            this.timeLabel.Name = "timeLabel";
+            this.timeLabel.Size = new System.Drawing.Size(125, 60);
+            this.timeLabel.TabIndex = 24;
+            this.timeLabel.Text = "00:00";
+            this.timeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // dateLabel
+            // 
+            this.dateLabel.AutoSize = true;
+            this.dateLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.dateLabel.Font = new System.Drawing.Font("Franklin Gothic Medium", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateLabel.ForeColor = System.Drawing.Color.Black;
+            this.dateLabel.Location = new System.Drawing.Point(23, 60);
+            this.dateLabel.Name = "dateLabel";
+            this.dateLabel.Size = new System.Drawing.Size(236, 28);
+            this.dateLabel.TabIndex = 25;
+            this.dateLabel.Text = "Day Month date, year";
+            this.dateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // dateLine
+            // 
+            this.dateLine.BackColor = System.Drawing.Color.Black;
+            this.dateLine.Location = new System.Drawing.Point(25, 85);
+            this.dateLine.Name = "dateLine";
+            this.dateLine.Size = new System.Drawing.Size(400, 5);
+            this.dateLine.TabIndex = 26;
+            // 
+            // currentTempLabel
+            // 
+            this.currentTempLabel.Font = new System.Drawing.Font("Franklin Gothic Medium", 45F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.currentTempLabel.Location = new System.Drawing.Point(16, 357);
+            this.currentTempLabel.Name = "currentTempLabel";
+            this.currentTempLabel.Size = new System.Drawing.Size(243, 101);
+            this.currentTempLabel.TabIndex = 27;
+            this.currentTempLabel.Text = "-00°C";
+            this.currentTempLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // highLabel
+            // 
+            this.highLabel.Font = new System.Drawing.Font("Franklin Gothic Medium", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.highLabel.Location = new System.Drawing.Point(279, 357);
+            this.highLabel.Name = "highLabel";
+            this.highLabel.Size = new System.Drawing.Size(121, 44);
+            this.highLabel.TabIndex = 28;
+            this.highLabel.Text = "-00°C";
+            this.highLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(279, 396);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(121, 5);
+            this.label1.TabIndex = 29;
+            // 
+            // lowLabel
+            // 
+            this.lowLabel.Font = new System.Drawing.Font("Franklin Gothic Medium", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lowLabel.Location = new System.Drawing.Point(279, 396);
+            this.lowLabel.Name = "lowLabel";
+            this.lowLabel.Size = new System.Drawing.Size(121, 44);
+            this.lowLabel.TabIndex = 30;
+            this.lowLabel.Text = "-00°C";
+            this.lowLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // TodayScreen
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.highLabel);
+            this.Controls.Add(this.currentTempLabel);
+            this.Controls.Add(this.dateLine);
+            this.Controls.Add(this.dateLabel);
+            this.Controls.Add(this.timeLabel);
+            this.Controls.Add(this.locationLabel);
+            this.Controls.Add(this.iconCurrent);
             this.Controls.Add(this.vertLabel2);
             this.Controls.Add(this.vertLabel1);
             this.Controls.Add(this.horLabel);
@@ -288,6 +402,7 @@
             this.Controls.Add(this.icon6);
             this.Controls.Add(this.icon3);
             this.Controls.Add(this.divideLabel);
+            this.Controls.Add(this.lowLabel);
             this.Name = "TodayScreen";
             this.Size = new System.Drawing.Size(450, 800);
             ((System.ComponentModel.ISupportInitialize)(this.icon3)).EndInit();
@@ -296,6 +411,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.icon12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icon15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icon18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconCurrent)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -325,5 +441,14 @@
         private System.Windows.Forms.Label horLabel;
         private System.Windows.Forms.Label vertLabel1;
         private System.Windows.Forms.Label vertLabel2;
+        private System.Windows.Forms.PictureBox iconCurrent;
+        private System.Windows.Forms.Label locationLabel;
+        private System.Windows.Forms.Label timeLabel;
+        private System.Windows.Forms.Label dateLabel;
+        private System.Windows.Forms.Label dateLine;
+        private System.Windows.Forms.Label currentTempLabel;
+        private System.Windows.Forms.Label highLabel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lowLabel;
     }
 }

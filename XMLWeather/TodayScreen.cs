@@ -17,6 +17,13 @@ namespace XMLWeather
         {
             InitializeComponent();
             DisplayForecast();
+
+            //dateTime stuff
+            timeLabel.Text = DateTime.Now.ToString("HH:mm");
+            dateLabel.Text = DateTime.Now.ToString("dddd MMMM dd, yyy");
+            dateLabel.Location = new Point(225 - dateLabel.Width/2, 65);
+            dateLine.Width = dateLabel.Width;
+            dateLine.Location = new Point(dateLabel.Location.X, dateLabel.Location.Y + dateLabel.Height);
         }
 
         public void DisplayForecast()
@@ -24,7 +31,7 @@ namespace XMLWeather
             int n = 3;
             foreach(Day d in Form1.days)
             {
-                if (n < 18)
+                if (n <= 18)
                 {
                     Control time = this.Controls["timeLabel" + n];
                     Control temp = this.Controls["tempLabel" + n];
@@ -37,6 +44,16 @@ namespace XMLWeather
                     icon.Image = img;
 
                     n = n + 3;
+                }
+                else
+                {
+                    locationLabel.Text = d.location;
+                    currentTempLabel.Text = d.currentTemp + "°C";
+                    highLabel.Text = d.tempHigh + "°C";
+                    lowLabel.Text = d.tempLow + "°C";
+
+                    var img = (Image)Properties.Resources.ResourceManager.GetObject("_" + d.condition);
+                    iconCurrent.BackgroundImage = img;
                 }
 
             }
