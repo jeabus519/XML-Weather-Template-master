@@ -29,12 +29,6 @@
         private void InitializeComponent()
         {
             this.divideLabel = new System.Windows.Forms.Label();
-            this.icon3 = new System.Windows.Forms.PictureBox();
-            this.icon6 = new System.Windows.Forms.PictureBox();
-            this.icon9 = new System.Windows.Forms.PictureBox();
-            this.icon12 = new System.Windows.Forms.PictureBox();
-            this.icon15 = new System.Windows.Forms.PictureBox();
-            this.icon18 = new System.Windows.Forms.PictureBox();
             this.tempLabel12 = new System.Windows.Forms.Label();
             this.timeLabel12 = new System.Windows.Forms.Label();
             this.tempLabel3 = new System.Windows.Forms.Label();
@@ -50,7 +44,6 @@
             this.horLabel = new System.Windows.Forms.Label();
             this.vertLabel1 = new System.Windows.Forms.Label();
             this.vertLabel2 = new System.Windows.Forms.Label();
-            this.iconCurrent = new System.Windows.Forms.PictureBox();
             this.locationLabel = new System.Windows.Forms.Label();
             this.timeLabel = new System.Windows.Forms.Label();
             this.dateLabel = new System.Windows.Forms.Label();
@@ -59,13 +52,20 @@
             this.highLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lowLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.icon3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icon6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icon9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icon12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icon15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icon18)).BeginInit();
+            this.iconCurrent = new System.Windows.Forms.PictureBox();
+            this.icon18 = new System.Windows.Forms.PictureBox();
+            this.icon15 = new System.Windows.Forms.PictureBox();
+            this.icon12 = new System.Windows.Forms.PictureBox();
+            this.icon9 = new System.Windows.Forms.PictureBox();
+            this.icon6 = new System.Windows.Forms.PictureBox();
+            this.icon3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrent)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icon18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icon15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icon12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icon9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icon6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icon3)).BeginInit();
             this.SuspendLayout();
             // 
             // divideLabel
@@ -75,59 +75,6 @@
             this.divideLabel.Name = "divideLabel";
             this.divideLabel.Size = new System.Drawing.Size(400, 8);
             this.divideLabel.TabIndex = 0;
-            // 
-            // icon3
-            // 
-            this.icon3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.icon3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.icon3.Image = global::XMLWeather.Properties.Resources._01d;
-            this.icon3.Location = new System.Drawing.Point(50, 513);
-            this.icon3.Margin = new System.Windows.Forms.Padding(0);
-            this.icon3.Name = "icon3";
-            this.icon3.Size = new System.Drawing.Size(96, 96);
-            this.icon3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.icon3.TabIndex = 1;
-            this.icon3.TabStop = false;
-            // 
-            // icon6
-            // 
-            this.icon6.Location = new System.Drawing.Point(177, 513);
-            this.icon6.Name = "icon6";
-            this.icon6.Size = new System.Drawing.Size(96, 96);
-            this.icon6.TabIndex = 2;
-            this.icon6.TabStop = false;
-            // 
-            // icon9
-            // 
-            this.icon9.Location = new System.Drawing.Point(304, 513);
-            this.icon9.Name = "icon9";
-            this.icon9.Size = new System.Drawing.Size(96, 96);
-            this.icon9.TabIndex = 3;
-            this.icon9.TabStop = false;
-            // 
-            // icon12
-            // 
-            this.icon12.Location = new System.Drawing.Point(50, 669);
-            this.icon12.Name = "icon12";
-            this.icon12.Size = new System.Drawing.Size(96, 96);
-            this.icon12.TabIndex = 4;
-            this.icon12.TabStop = false;
-            // 
-            // icon15
-            // 
-            this.icon15.Location = new System.Drawing.Point(177, 669);
-            this.icon15.Name = "icon15";
-            this.icon15.Size = new System.Drawing.Size(96, 96);
-            this.icon15.TabIndex = 5;
-            this.icon15.TabStop = false;
-            // 
-            // icon18
-            // 
-            this.icon18.Location = new System.Drawing.Point(304, 669);
-            this.icon18.Name = "icon18";
-            this.icon18.Size = new System.Drawing.Size(96, 96);
-            this.icon18.TabIndex = 6;
-            this.icon18.TabStop = false;
             // 
             // tempLabel12
             // 
@@ -273,19 +220,6 @@
             this.vertLabel2.Size = new System.Drawing.Size(3, 312);
             this.vertLabel2.TabIndex = 21;
             // 
-            // iconCurrent
-            // 
-            this.iconCurrent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconCurrent.BackgroundImage = global::XMLWeather.Properties.Resources._01d;
-            this.iconCurrent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.iconCurrent.Location = new System.Drawing.Point(129, 130);
-            this.iconCurrent.Margin = new System.Windows.Forms.Padding(0);
-            this.iconCurrent.Name = "iconCurrent";
-            this.iconCurrent.Size = new System.Drawing.Size(192, 192);
-            this.iconCurrent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.iconCurrent.TabIndex = 22;
-            this.iconCurrent.TabStop = false;
-            // 
             // locationLabel
             // 
             this.locationLabel.BackColor = System.Drawing.Color.Black;
@@ -369,6 +303,72 @@
             this.lowLabel.Text = "-00°C";
             this.lowLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // iconCurrent
+            // 
+            this.iconCurrent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconCurrent.BackgroundImage = global::XMLWeather.Properties.Resources._01d;
+            this.iconCurrent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.iconCurrent.Location = new System.Drawing.Point(129, 130);
+            this.iconCurrent.Margin = new System.Windows.Forms.Padding(0);
+            this.iconCurrent.Name = "iconCurrent";
+            this.iconCurrent.Size = new System.Drawing.Size(192, 192);
+            this.iconCurrent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.iconCurrent.TabIndex = 22;
+            this.iconCurrent.TabStop = false;
+            // 
+            // icon18
+            // 
+            this.icon18.Location = new System.Drawing.Point(304, 669);
+            this.icon18.Name = "icon18";
+            this.icon18.Size = new System.Drawing.Size(96, 96);
+            this.icon18.TabIndex = 6;
+            this.icon18.TabStop = false;
+            // 
+            // icon15
+            // 
+            this.icon15.Location = new System.Drawing.Point(177, 669);
+            this.icon15.Name = "icon15";
+            this.icon15.Size = new System.Drawing.Size(96, 96);
+            this.icon15.TabIndex = 5;
+            this.icon15.TabStop = false;
+            // 
+            // icon12
+            // 
+            this.icon12.Location = new System.Drawing.Point(50, 669);
+            this.icon12.Name = "icon12";
+            this.icon12.Size = new System.Drawing.Size(96, 96);
+            this.icon12.TabIndex = 4;
+            this.icon12.TabStop = false;
+            // 
+            // icon9
+            // 
+            this.icon9.Location = new System.Drawing.Point(304, 513);
+            this.icon9.Name = "icon9";
+            this.icon9.Size = new System.Drawing.Size(96, 96);
+            this.icon9.TabIndex = 3;
+            this.icon9.TabStop = false;
+            // 
+            // icon6
+            // 
+            this.icon6.Location = new System.Drawing.Point(177, 513);
+            this.icon6.Name = "icon6";
+            this.icon6.Size = new System.Drawing.Size(96, 96);
+            this.icon6.TabIndex = 2;
+            this.icon6.TabStop = false;
+            // 
+            // icon3
+            // 
+            this.icon3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.icon3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.icon3.Image = global::XMLWeather.Properties.Resources._01d;
+            this.icon3.Location = new System.Drawing.Point(50, 513);
+            this.icon3.Margin = new System.Windows.Forms.Padding(0);
+            this.icon3.Name = "icon3";
+            this.icon3.Size = new System.Drawing.Size(96, 96);
+            this.icon3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.icon3.TabIndex = 1;
+            this.icon3.TabStop = false;
+            // 
             // TodayScreen
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -405,13 +405,14 @@
             this.Controls.Add(this.lowLabel);
             this.Name = "TodayScreen";
             this.Size = new System.Drawing.Size(450, 800);
-            ((System.ComponentModel.ISupportInitialize)(this.icon3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icon6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icon9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icon12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icon15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icon18)).EndInit();
+            this.Click += new System.EventHandler(this.TodayScreen_Click);
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icon18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icon15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icon12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icon9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icon6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icon3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

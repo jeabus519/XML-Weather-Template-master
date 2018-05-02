@@ -1,4 +1,8 @@
-﻿using System;
+﻿/// created by : Michael Peterman
+/// date       : May 02, 2018
+/// description: A weather app. It displys the current forecast in a user-friendly way.
+ 
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -87,12 +91,12 @@ namespace XMLWeather
         {
             XmlDocument doc = new XmlDocument();
             doc.Load("WeatherData7Day.xml");
-            Day d = new Day();
             XmlNodeList timeList = doc.GetElementsByTagName("time");
 
             int x = 0;
             foreach(XmlNode n in timeList)
             {
+                Day d = new Day();
                 if (x >= 1 && x <= 5)
                 {
                     XmlNode time = n;
@@ -108,7 +112,7 @@ namespace XMLWeather
                     d.tempLow = Convert.ToString(tempVal);
 
                     DateTime t = Convert.ToDateTime(time.Attributes["day"].Value);
-                    d.date = t.ToString("dddd, MMMM dd");
+                    d.date = t.ToString("ddd, MMMM dd");
 
                     d.condition = conditions.Attributes["var"].Value;
                     string st = d.condition.Substring(0, 2);
@@ -127,6 +131,7 @@ namespace XMLWeather
                         d.condition = st;
                     }
                 }
+                fDays.Add(d);
 
                 x++;
                 if (x > 5)

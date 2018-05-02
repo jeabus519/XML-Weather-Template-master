@@ -58,5 +58,14 @@ namespace XMLWeather
 
             }
         }
+
+        private void TodayScreen_Click(object sender, EventArgs e)
+        {
+            Form f = this.FindForm();
+            ForeScreen fs = new ForeScreen();
+            f.Controls.Remove(this);
+            f.Controls.Add(fs);
+            fs.Focus();
+        }
     }
 }
